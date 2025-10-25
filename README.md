@@ -1,6 +1,16 @@
-# Welcome to your Expo app 👋
+# Food Monkey 🍔
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern food ordering app built with [Expo](https://expo.dev) and React Native. Browse restaurants, search for your favorite dishes, and order food seamlessly on iOS, Android, and the web.
+
+## Features
+
+- 🔐 **User Authentication** – Secure sign-in and sign-up with email
+- 🏪 **Browse Restaurants** – Explore a wide variety of restaurants and their menus
+- 🔍 **Search Functionality** – Quickly find your favorite food items and restaurants
+- 🛒 **Shopping Cart** – Add items to cart and manage your order
+- 👤 **User Profile** – Manage your account and order history
+- 📱 **Cross-Platform** – Works seamlessly on iOS, Android, and the web
+- 🎨 **Modern UI** – Built with Tailwind CSS and NativeWind for responsive design
 
 ## Get started
 
