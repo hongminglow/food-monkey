@@ -56,7 +56,7 @@ const Profile = () => {
             />
           </View>
 
-          <View className="flex-row gap-x-2.5 ">
+          <View className="flex-row gap-x-2.5">
             <View className="size-12 rounded-full bg-primary/5 items-center justify-center">
               <Image source={images.location} className="size-5" />
             </View>
@@ -71,8 +71,8 @@ const Profile = () => {
             title="Logout"
             onPress={logout}
             leftIcon={<Image source={images.logout} className="size-6" />}
-            style="bg-error/5 border border-error gap-x-2"
-            textStyle="text-error font-quicksand-bold text-base"
+            style="bg-error/5 border border-error gap-x-2 "
+            textStyle="font-quicksand-bold text-base !text-error"
           />
         </View>
       </View>
