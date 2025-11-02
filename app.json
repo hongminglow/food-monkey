@@ -19,7 +19,8 @@
         "monochromeImage": "./assets/images/logo.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.ming1212.foodmonkey"
     },
     "web": {
       "bundler": "metro",
@@ -52,6 +53,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "644ab8db-96e1-4ec8-b185-969212d4fa12"
+      }
+    },
+    "owner": "ming1212"
   }
 }
