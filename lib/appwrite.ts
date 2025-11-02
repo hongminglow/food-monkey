@@ -5,6 +5,7 @@ import {
   Client,
   Databases,
   ID,
+  Models,
   Query,
   Storage,
 } from "react-native-appwrite";
@@ -43,8 +44,6 @@ export const createUser = async ({
     const newAccount = await account.create(ID.unique(), email, password, name);
     if (!newAccount) throw Error;
 
-    await signIn({ email, password });
-
     const avatarUrl = avatars.getInitialsURL(name);
 
     return await databases.createDocument(
@@ -58,9 +57,13 @@ export const createUser = async ({
   }
 };
 
-export const signIn = async ({ email, password }: SignInParams) => {
+export const signIn = async ({
+  email,
+  password,
+}: SignInParams): Promise<Models.Session> => {
   try {
     const session = await account.createEmailPasswordSession(email, password);
+    return session;
   } catch (e) {
     throw new Error(e as string);
   }
@@ -113,6 +116,14 @@ export const getCategories = async () => {
     );
 
     return categories.documents;
+  } catch (e) {
+    throw new Error(e as string);
+  }
+};
+
+export const signOut = async () => {
+  try {
+    await account.deleteSession("current");
   } catch (e) {
     throw new Error(e as string);
   }
